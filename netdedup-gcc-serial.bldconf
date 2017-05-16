@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#source ${PARSECDIR}/pkgs/netapps/netdedup/parsec/gcc-pthreads.bldconf
+
+# Override build environment
+
+build_deps="uptcpip ssl zlib"
+
+build_env="version=serial CFLAGS=\"-I${PARSECDIR}/pkgs/libs/ssl/inst/${PARSECPLAT}/include -I${PARSECDIR}/pkgs/libs/uptcpip/inst/${PARSECPLAT}/include -I${PARSECDIR}/pkgs/libs/zlib/inst/${PARSECPLAT}/include ${CFLAGS}\" LDFLAGS=\"-L${PARSECDIR}/pkgs/libs/ssl/inst/${PARSECPLAT}/lib -L${PARSECDIR}/pkgs/libs/zlib/inst/${PARSECPLAT}/lib -L${PARSECDIR}/pkgs/libs/uptcpip/inst/${PARSECPLAT}/lib ${LDFLAGS}\""
+
+build_inplace="TRUE"
+
+# Arguments to pass to the configure script, if it exists
+build_conf=""
