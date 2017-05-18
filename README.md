@@ -1,25 +1,28 @@
-<<<<<<< HEAD
 # HOW-TO-USE-IT
 
-First, copy all files to parsec 3.0 root dir.
+- Copy all files to parsec 3.0 root dir.
 
-cp ./parsec3_patch/* Where-Paresc3.0-Is/
+  cp ./parsec3_patch/* Where-Paresc3.0-Is/
 
-Second, execute the patch.sh.
+- Execute the patch.sh.
 
-./patch.sh
+  ./patch.sh
 
 
 # PARSEC 3.0 installation issues
 
 1. Download
+
     (http://parsec.cs.princeton.edu/download.htm)
 
 2. Install following packages on Ununtu 14.04
+
     sudo apt-get install -y build-essential m4 x11proto-xext-dev libglu1-mesa-dev libxi-dev libxmu-dev libtbb-dev libssl-dev
 
 3. Correct compile error
+
     1) FTBFS(Fails To Build From Source) with perl 5.18
+    
         Error message is like below.
 
         "xxx.pod arround line XXX: Experted text after =item, not a number"
@@ -29,6 +32,7 @@ Second, execute the patch.sh.
         "sed -i "s/=item \([0-9]\)/=item '\1'/g" $(find . -name "*.pod")"
 
     2) __mbstate_t conflict (Thanks to yulistic)
+    
         Error memsage is like below.
 
         "error: conflicting type for '__mbstate_t' ..."
@@ -36,6 +40,7 @@ Second, execute the patch.sh.
         It is because of conflict between system declauration and parsec library. Comment out the declaration of "__mbstate" in "[PARSEC_ROOT_DIR]/pkgs/libs/uptcpip/src/include/sys/bsd__types.h". Or just copy a corrected .h file to that path.
 
     3) gcc-serial configure file incorrections
+    
         Error memssage is like below.
 
         - "make[1]: *** No rule to make target `/home/precise/yuh-work/Benchmark/parsec-3.0/pkgs/netapps/netferret/obj/amd64-linux.gcc-serial/server/parsec/obj/ferret-serial.o', needed by `/home/precise/yuh-work/Benchmark/parsec-3.0/pkgs/netapps/netferret/obj/amd64-linux.gcc-serial/server/parsec/bin/ferret-serial'.  Stop."
@@ -55,12 +60,4 @@ REFERANCE
 1. https://yulistic.gitlab.io/2016/05/parsec-3.0-installation-issues/
 
 2. http://parsec.cs.princeton.edu/parsec3-doc.htm#simulation        
-        
-        
-        
-        
-=======
-# INSTRCTIONS
-##  1. cp parsec3_patch/* Where-Paresc3.0-Is/
-##  2. bash Where-Parsec3.0-Is/patch.sh
->>>>>>> 926e8b5e0517222326eaf0ac2d881977be9ed504
+   
