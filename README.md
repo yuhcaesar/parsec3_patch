@@ -39,7 +39,7 @@ It is because of perl verison conflict. Go to line specified in specified file (
 sed -i "s/=item \([0-9]\)/=item '\1'/g" $(find . -name "*.pod")`
 ```
         
-#### 2. __mbstate_t conflict (Thanks to yulistic)
+#### 2. __mbstate_t conflict
     
 Error memsage is like below.
 ```
@@ -56,7 +56,7 @@ Error memssage is like below.
 ```
 make[1]: *** No rule to make target /home/precise/yuh-work/Benchmark/parsec-3.0/pkgs/netapps/netferret/obj/amd64-linux.gcc-serial/server/parsec/obj/ferret-serial.o', needed by /home/precise/yuh-work/Benchmark/parsec-3.0/pkgs/netapps/netferret/obj/amd64-linux.gcc-serial/server/parsec/bin/ferret-serial'.  Stop.
 ```
-It is because of the missing file `ferrect-serial.c`. So it can't be corrected if you don't have the missing source files, but you can mute the compiler by commenting out the line `build_env=...` in the configure file `gcc-serial.bldconf`. Or just copy the "corrected" configuration file to the path `[PARSEC_ROOT_DIR]/pkgs/netapps/netferret/parsec/gcc-serial.bldconf`
+It is because of the missing file `ferrect-serial.c`. So it can't be corrected if you don't have the missing source files, but you can mute the compiler by commenting out the line `build_env=...`. Or just copy the "corrected" configuration file to the path `[PARSEC_ROOT_DIR]/pkgs/netapps/netferret/parsec/gcc-serial.bldconf`
 
 ##### Lacking options
 
