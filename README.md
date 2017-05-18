@@ -51,8 +51,10 @@
 
         It's because of the lacking options in "build_env". Go to line specified in specified gcc-serial.bldconf and change "build_env=..." to:
 
-        build_env="version=serial CFLAGS=\"-I${PARSECDIR}/pkgs/libs/ssl/inst/${PARSECPLAT}/include -I${PARSECDIR}/pkgs/libs/uptcpip/inst/${PARSECPLAT}/include -I${PARSECDIR}/pkgs/libs/zlib/inst/${PARSECPLAT}/include ${CFLAGS}\" LDFLAGS=\" -L${PARSECDIR}/pkgs/libs/ssl/inst/${PARSECPLAT}/lib -L${PARSECDIR}/pkgs/libs/zlib/inst/${PARSECPLAT}/lib -L${PARSECDIR}/pkgs/libs/uptcpip/inst/${PARSECPLAT}/lib ${LDFLAGS}\""
+        (netdedup): build_env="version=serial CFLAGS=\"-I${PARSECDIR}/pkgs/libs/ssl/inst/${PARSECPLAT}/include -I${PARSECDIR}/pkgs/libs/uptcpip/inst/${PARSECPLAT}/include -I${PARSECDIR}/pkgs/libs/zlib/inst/${PARSECPLAT}/include ${CFLAGS}\" LDFLAGS=\"-L${PARSECDIR}/pkgs/libs/ssl/inst/${PARSECPLAT}/lib -L${PARSECDIR}/pkgs/libs/zlib/inst/${PARSECPLAT}/lib -L${PARSECDIR}/pkgs/libs/uptcpip/inst/${PARSECPLAT}/lib ${LDFLAGS}\""
 
+        (netstreamcluster): build_env="version=serial CXXFLAGS=\"-I${PARSECDIR}/pkgs/libs/uptcpip/inst/${PARSECPLAT}/include ${CXXFLAGS}\" LDFLAGS=\"-L${PARSECDIR}/pkgs/libs/uptcpip/inst/${PARSECPLAT}/lib ${LDFLAGS}\""
+        
         Or just copy a corrected file to the path "[PARSEC_ROOT_DIR]/pkgs/XXX/XXX/parsec/gcc-serial.bldconf".
 
 REFERANCE
