@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # HOW-TO-USE-IT
 
 First, copy all files to parsec 3.0 root dir.
@@ -58,3 +59,8 @@ REFERANCE
         
         
         
+=======
+# INSTRCTIONS
+##  1. cp parsec3_patch/* Where-Paresc3.0-Is/
+##  2. bash Where-Parsec3.0-Is/patch.sh
+>>>>>>> 926e8b5e0517222326eaf0ac2d881977be9ed504
