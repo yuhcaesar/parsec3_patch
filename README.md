@@ -25,7 +25,7 @@ sudo apt-get install -y build-essential m4 x11proto-xext-dev libglu1-mesa-dev li
 
 ### 3. Correct compile error
 
-#### FTBFS(Fails To Build From Source) with perl 5.18
+#### 1. FTBFS(Fails To Build From Source) with perl 5.18
     
 Error message is like below.
 
@@ -39,7 +39,7 @@ It is because of perl verison conflict. Go to line specified in specified file (
 sed -i "s/=item \([0-9]\)/=item '\1'/g" $(find . -name "*.pod")`
 ```
         
-#### __mbstate_t conflict (Thanks to yulistic)
+#### 2. __mbstate_t conflict (Thanks to yulistic)
     
 Error memsage is like below.
 ```
@@ -47,7 +47,7 @@ error: conflicting type for '__mbstate_t' ...
 ```        
 It is because of conflict between system declauration and parsec library. Comment out the declaration of `__mbstate` in `[PARSEC_ROOT_DIR]/pkgs/libs/uptcpip/src/include/sys/bsd__types.h`. Or just copy a corrected .h file to that path.
 
-#### gcc-serial configure file incorrections
+#### 3. gcc-serial configure file incorrections
     
 Error memssage is like below.
 
