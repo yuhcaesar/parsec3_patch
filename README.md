@@ -76,7 +76,7 @@ build_env="version=serial CXXFLAGS=\"-I${PARSECDIR}/pkgs/libs/uptcpip/inst/${PAR
 ```
 Or just copy a corrected file to the path `[PARSEC_ROOT_DIR]/pkgs/XXX/XXX/parsec/gcc-serial.bldconf`.
 
-## REFERANCE
+## REFERENCE
 
 1. https://yulistic.gitlab.io/2016/05/parsec-3.0-installation-issues/
 
