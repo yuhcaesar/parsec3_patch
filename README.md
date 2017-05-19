@@ -4,7 +4,7 @@
 
 Copy all files to parsec 3.0 root dir.
 ```
-cp ./parsec3_patch/* Where-Paresc3.0-Is/`
+cp ./parsec3_patch/* PARSEC_ROOT_DIR/
 ```
 execute the patch.sh.
 ```
