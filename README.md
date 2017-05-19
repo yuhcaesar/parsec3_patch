@@ -20,7 +20,7 @@ execute the patch.sh.
 ### 2. Install following packages on Ununtu 14.04
 
 ```
-sudo apt-get install -y build-essential m4 x11proto-xext-dev libglu1-mesa-dev libxi-dev libxmu-dev libtbb-dev libssl-dev`
+sudo apt-get install -y build-essential m4 x11proto-xext-dev libglu1-mesa-dev libxi-dev libxmu-dev libtbb-dev libssl-dev
 ```
 
 ### 3. Correct compilation error
@@ -30,13 +30,13 @@ sudo apt-get install -y build-essential m4 x11proto-xext-dev libglu1-mesa-dev li
 Error message is like below.
 
 ```
-xxx.pod arround line XXX: Experted text after =item, not a number`
+xxx.pod arround line XXX: Experted text after =item, not a number
 ```
         
 It is because of perl verison conflict. Go to line specified in specified file (xxx.pod) and change `=item 1` to `=item '1'` or `=item C<1>`. Or use following shell script
 
 ```
-sed -i "s/=item \([0-9]\)/=item '\1'/g" $(find . -name "*.pod")`
+sed -i "s/=item \([0-9]\)/=item '\1'/g" $(find . -name "*.pod")
 ```
         
 #### 2. __mbstate_t conflict
