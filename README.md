@@ -58,12 +58,12 @@ make[1]: *** No rule to make target /home/precise/yuh-work/Benchmark/parsec-3.0/
 ```
 It is because of the missing file `ferrect-serial.c`. So it can't be corrected if you don't have the missing source files, but you can mute the compiler by commenting out the line `build_env=` in `gcc-serial.bldconf`. Or just copy the "corrected" configuration file to the path `[PARSEC_ROOT_DIR]/pkgs/netapps/netferret/parsec/gcc-serial.bldconf`
 
-##### Lacking options
+##### Missing options
 
 ```
 fatal error: uptcp_socket.h: No such file or directiory
 ```
-It's because of the lacking options in `build_env`. Go to line specified in specified gcc-serial.bldconf and change `build_env=...` to:
+It's because of the missing options in `build_env`. Go to line specified in specified gcc-serial.bldconf and change `build_env=...` to:
 
 (netdedup):
 ```
