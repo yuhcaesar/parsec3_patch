@@ -17,7 +17,7 @@ execute the patch.sh.
 
 * [PARSEC3.0](http://parsec.cs.princeton.edu/download.htm)
 
-### 2. Install following packages on Ununtu 14.04
+### 2. Install following packages on Ubuntu 14.04
 
 ```
 sudo apt-get install -y build-essential m4 x11proto-xext-dev libglu1-mesa-dev libxi-dev libxmu-dev libtbb-dev libssl-dev
